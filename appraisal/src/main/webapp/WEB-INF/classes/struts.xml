@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 请求参数的编码方式 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<package name="custom-default" extends="struts-default">
+
+		<interceptors>
+			<interceptor name="annotationInterceptor" class="nju.software.appraisal.interceptor.AccessInterceptor" />
+			<interceptor-stack name="annotatedStack">
+				<interceptor-ref name="annotationInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		 <!-- 设置全局 全局默认的拦截器栈-->  
+        <default-interceptor-ref name="annotatedStack"></default-interceptor-ref> 
+        
+	</package>
+
+</struts>    

@@ -1,0 +1,21 @@
+.table_footer{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.change_page select{
+    width: 58px;
+    display: inline-block;
+}
+.total{
+    float: left;
+    margin:0 10px;
+}
+.output{
+    float: right;
+    margin:0 10px;
+}
+.change_page{
+    float: right;
+    margin:0 10px;
+}

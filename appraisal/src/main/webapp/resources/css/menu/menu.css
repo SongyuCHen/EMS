@@ -1,0 +1,80 @@
+.date_time{
+    color: white;
+    text-align: center;
+    line-height: 1.5em;
+    padding: 18px 0 15px 0;
+}
+.menu hr{
+    border: none;
+    border-top: 1px rgb(1,63,122) solid;
+    border-bottom: 1px rgb(0,102,191) solid;
+    width: 95%;
+    margin: 0;
+}
+.menu_item_list{
+    color: white;
+    line-height: 1.5em;
+}
+.menu_item{
+    padding:10px;
+}
+.menu_icon_left{
+    float: left;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+.menu_icon_right{
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+}
+.menu [data-show=yes]{
+    background: url("../../image/menu/menu.png") no-repeat 0 0;
+}
+.menu [data-show=no]{
+    background: url("../../image/menu/menu.png") no-repeat 0 -16px;
+}
+.sub_item span{
+    display: block;
+    padding: 6px 0 6px 33px;
+}
+.sub_item_list{
+    background-color: rgb(1,63,122);
+}
+.sub_item span:hover{
+    cursor: pointer;
+    background-color: rgb(204,42,30);
+}
+.menu_item:hover{
+    cursor: pointer;
+    /*background-color: rgb(1,63,122);*/
+}
+.sm_bar{
+    height: 60px;
+    line-height: 60px;
+    background-color: rgb(0,103,192);
+    border-left: 1px solid rgb(3,138,255);
+    border-top: 1px solid rgb(3,138,255);
+    border-bottom: 1px solid rgb(2,55,155);
+    width: 100%;
+}
+.sm_bar:hover{
+    cursor: pointer;
+}
+.sm_bar img{
+	margin-top:20px;
+}
+.lte9 .sm_bar img{
+	margin-top:0;
+}
+.menu .nav{
+	background-color: rgb(204,42,30);
+}
+[data-level=second_level]{
+	padding-left:50px !important;
+}

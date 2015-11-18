@@ -1,0 +1,39 @@
+.title{
+    height: 113px;
+    width: 100%;
+    border-top: 1px rgb(207,207,207) solid;
+    background: url("../../image/title/title_bg.png") repeat;
+}
+.logo{
+    background: url("../../image/title/title_img.png") no-repeat 0 0;
+    width: 55px;
+    height: 55px;
+    margin: 25px 0 0 40px;
+    float: left;
+}
+.sys_name{
+    background: url("../../image/title/title_img.png") no-repeat 0 -60px;
+    width: 330px;
+    height: 30px;
+    float: left;
+    margin: 37px 0 0 10px;
+}
+.items{
+    float: right;
+    width: 70px;
+    margin-right: 35px;
+    margin-top: 33px;
+}
+.item{
+    float: left;
+    width: 25px;
+    height: 30px;
+
+}
+#revise_pw{
+    background: url("../../image/title/title_img.png") no-repeat 0 -230px;
+    margin-right: 20px;
+}
+#logout{
+    background: url("../../image/title/title_img.png") no-repeat 0 -277px;
+}

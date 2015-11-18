@@ -1,0 +1,35 @@
+body{
+    background: url("../../image/index/index_bg.png") repeat;
+}
+
+.background{
+    width:100%;
+    height: 100%;
+    text-align:center;
+    padding-top:37%;
+    background:url("../../image/index/index_temp.png") no-repeat;
+    background-size:100%;
+}
+.background label{
+    width: 60px;
+    text-align: right;
+}
+.form-horizontal .form-group{
+    margin-right: 0 !important;
+}
+.parent{
+	width:100%;
+    height:27px;
+    line-height:27px;      
+    margin-right: 0 !important;
+    margin-top:20px;
+
+}
+.parent span{
+	display:inline-block;
+	width:330px;
+	height:27px;
+	line-height:27px;
+	text-align:right;
+	font-size:22px;
+}

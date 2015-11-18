@@ -1,0 +1,18 @@
+.sub_title{
+    width: 100%;
+    background-color: rgb(0,84,157);
+    height: 30px;
+    padding: 5px 15px;
+}
+.sub_title img{
+    float: left;
+}
+.sub_title .location{
+    float: left;
+    color: white;
+    margin-left: 10px;
+    padding-top: 2px;
+}
+.sub_title .location span{
+    margin-right: 5px;
+}
