@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by zxyu on 15-10-17.
  */
 
@@ -76,8 +76,8 @@ function search_trigger(){
 
 
 function tableCtrl_3($scope){
-	$scope.df = [
-	             {name:"(2015)定中民一初字第0210号",done:true},
+	$scope.lawcase = [
+	             {name:"(2015)定中民一初字第0210号",done:false},
 	             {name:"(2015)定中民一初字第0211号",done:false},
 	             {name:"(2015)定中民一初字第0212号",done:false},
 	             {name:"(2015)定中民一初字第0213号",done:false},
@@ -87,21 +87,56 @@ function tableCtrl_3($scope){
 	             {name:"审监庭",}
 	             ];
 	$scope.staff = [
-	             {name:"赵浩"},
-	             {name:"王波"},
-	             {name:"凌无双"},
-	             {name:"楼亚军"},
-	             {name:"欧阳修"},
+	             {name:"赵浩",done:false},
+	             {name:"王波",done:false},
+	             {name:"凌无双",done:false},
+	             {name:"楼亚军",done:false},
+	             {name:"欧阳修",done:false},
 	             ];
-	$scope.result = [
-	                 {name:"(2015)定中民一初字第0210号/楼亚军"},
-	                 {name:"(2015)定中民一初字第0211号/凌无双"},
-	                 {name:"(2015)定中民一初字第0212号/王波"},
-	                 {name:"(2015)定中民一初字第0213号/赵浩"},
-	                 {name:"(2015)定中民一初字第0214号/欧阳修"},
-	                 ];
+	
+	//被分配的结果
+	$scope.result = [];
+	//被选中分配的案件
+	$scope.lawcaseSeleceted = [];
+	
 	$scope.allot = function(){
+		//获取选中案件的值
+		var oldcaseList = $scope.lawcase;
+		$scope.lawcase = [];
+		//被选中的职员
+		var staffSelected = $("input[name='staff']:checked").val();
+		//alert(staffSelected);
+		//存储
+		angular.forEach(oldcaseList,function(x){
+			if(x.done){ 
+				$scope.lawcaseSeleceted.push({name:x.name,done:false});	
+				$scope.result.push({lawcasename:x.name,staffname:staffSelected,done:false});
+			}else{
+				$scope.lawcase.push({name:x.name,done:false});
+			}
+		});
 		
-	}
+	};
+	//撤销选中的
+	$scope.turnback = function(){
+		var oldresult = $scope.result;
+		$scope.result = [];
+		var resultSelected = $("input[name='result']:checked");
+		//console.log(resultSelected);
+		angular.forEach(resultSelected,function(x){
+			console.log(x);
+			var lawcasename = x.value.split("/")[0];
+			var staffSelected = x.value.split("/")[1];
+				$scope.lawcase.push({name:lawcasename,done:false});						
+		});
+		
+		var resultUnSelected = $("input[name='result']").not("input:checked");
+		angular.forEach(resultUnSelected,function(x){
+			console.log(x);
+			var lawcasename = x.value.split("/")[0];
+			var staffSelected = x.value.split("/")[1];
+				$scope.result.push({lawcasename:lawcasename,staffname:staffSelected,done:false});			
+		});
+	};
 }
 

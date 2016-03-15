@@ -33,7 +33,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
-@RequestMapping("/")
 public class LoginController {
 	private static Logger logger = Logger.getLogger(LoginController.class);
 
@@ -60,7 +59,7 @@ public class LoginController {
 		 
 	}
 	
-	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String showMain(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model)
 			throws SignatureException {
@@ -73,7 +72,7 @@ public class LoginController {
 			return "login/login";
 	}
 	
-	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String showMainPage(HttpServletRequest request,
 			HttpServletResponse response, Model model)
 			throws Exception {

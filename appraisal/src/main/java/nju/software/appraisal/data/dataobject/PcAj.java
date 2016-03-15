@@ -3,6 +3,7 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
 @Table(name = "T_PCAJ")
@@ -72,6 +73,7 @@ public class PcAj implements Serializable{
 		this.pcz5=pcz5;
 		this.pcjg=pcjg;
 	}
+	@Id
 	@Column(name="BH",nullable=true)
 	public int getBh() {
 		return bh;

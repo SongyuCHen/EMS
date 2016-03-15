@@ -1,0 +1,246 @@
+@CHARSET "UTF-8";
+
+.print-area {
+	width: 896px;
+}
+
+.ems-area {
+	width: 896px;
+	height: 493px;
+	background: url(img/EMS-background.jpg);
+	position: relative;
+}
+.ah1 {
+	position: absolute;
+	margin-left: 168px;
+	margin-top: 292px;
+	width: 90px;
+	height: 20px;
+	font-size: 12px;
+}
+
+.ah2 {
+	position: absolute;
+	margin-left: 230px;
+	margin-top: 292px;
+	width: 124px;
+	height: 20px;
+	font-size: 12px;
+}
+
+.ah3 {
+	position: absolute;
+	margin-left: 316px;
+	margin-top: 292px;
+	width: 124px;
+	height: 20px;
+	font-size: 12px;
+}
+
+.sjrxm {
+	position: absolute;
+	margin-left: 496px;
+	margin-top: 127px;
+	width: 124px;
+	height: 20px;
+	font-size: 16px;
+}
+
+.yddh {
+	position: absolute;
+	margin-left: 666px;
+	margin-top: 126px;
+	width: 100px;
+	height: 20px;
+	font-size: 12px;
+}
+
+.zzdh {
+	position: absolute;
+	margin-left: 666px;
+	margin-top: 142px;
+	width: 100px;
+	height: 20px;
+	font-size: 12px;
+}
+
+.bgdh {
+	position: absolute;
+	margin-left: 666px;
+	margin-top: 160px;
+	width: 100px;
+	height: 20px;
+	font-size: 12px;
+}
+
+.dwmc {
+	position: absolute;
+	margin-left: 517px;
+	margin-top: 184px;
+	width: 295px;
+	height: 20px;
+	font-size: 16px;
+	margin-top: 184px;
+}
+
+.sjrdz {
+	position: absolute;
+	margin-left: 490px;
+	margin-top: 212px;
+	width: 326px;
+	height: 45px;
+	font-size: 16px;
+	margin-top: 212px;
+}
+
+.yzbm {
+	position: absolute;
+	margin-left: 715px;
+	margin-top: 255px;
+	width: 366px;
+	height: 20px;
+	font-size: 12px;
+	letter-spacing: 9px;
+}
+
+.jjnr-slajtzs {
+	position: absolute;
+	margin-left: 85px;
+margin-top: 311px;
+	width: 20px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.jjnr-cttzs {
+	position: absolute;
+	margin-left: 320px;
+margin-top: 312px;
+	width: 20px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.jjnr-ystzs {
+	position: absolute;
+	margin-left: 85px;
+margin-top: 326px;
+	width: 20px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.jjnr-mscds {
+	position: absolute;
+	margin-left: 320px;
+margin-top: 328px;
+	width: 20px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.jjnr-qshfszfb {
+	position: absolute;
+	margin-left: 85px;
+margin-top: 342px;
+	width: 20px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.jjnr-mscjs {
+	position: absolute;
+	margin-left: 320px;
+	margin-top: 343px;
+	width: 20px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.jjnr-dbzfb {
+	position: absolute;
+	margin-left: 85px;
+	margin-top: 357px;
+	width: 20px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.jjnr-mstjs {
+	position: absolute;
+	margin-left: 320px;
+	margin-top: 359px;
+	width: 20px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.jjnr-jztzs {
+	position: absolute;
+	margin-left: 85px;
+	margin-top: 373px;
+	width: 20px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.jjnr-qt {
+	position: absolute;
+	margin-left: 320px;
+	margin-top: 374px;
+	width: 20px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.jjnr-cp {
+	position: absolute;
+	margin-left: 85px;
+	margin-top: 390px;
+	width: 20px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.jjrdh {
+	position: absolute;
+	margin-left: 140px;
+	margin-top: 254px;
+	width: 100px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.wsmc {
+	position: absolute;
+	margin-left: 140px;
+	margin-top: 274px;
+	width: 340px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.fymc {
+	position: absolute;
+	margin-left: 86px;
+	margin-top: 168px;
+	font-size: 18px;
+	width: 180px;
+	text-align: right;
+}
+
+.fyyb {
+	position: absolute;
+	margin-left: 332px;
+	margin-top: 252px;
+	font-size: 12px;;
+	width: 100px;
+	letter-spacing: 9px;
+}
+
+.jjnr-* {
+	background-color:red;
+}
+
+.ah1, .ah2, .ah3, .sjrxm, .dwmc, .sjrdz, .jjnr-slajtzs, .jjnr-cttzs, .jjnr-ystzs, .jjnr-mscds, .jjnr-qshfszfb, .jjnr-mscjs, .jjnr-dbzfb, .jjnr-mstjs, .jjnr-jztzs, .jjnr-qt, .jjnr-cp, .wsmc, .fymc
+ {font-family: "楷体","楷体_GB2312";  } 

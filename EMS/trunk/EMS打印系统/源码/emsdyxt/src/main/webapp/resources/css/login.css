@@ -1,0 +1,58 @@
+
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}
+*{box-sizing:border-box;}
+
+#content{
+	width:1004px;
+	height: 600px;
+	margin: 0 auto;
+	background: url(img/login-bg.png);
+	position: relative;
+}
+
+#footer{
+	position: absolute;
+	bottom: 0px;
+	height: 57px;
+	line-height: 57px;
+	left: 44%;
+}
+
+input[type="text"]{
+	width:239px;
+	height: 34px;
+	border: none;
+	outline: none;
+	background: url(img/login-input-bg.png);
+	margin-bottom: 15px;
+}
+
+input[type="password"] {
+width: 239px;
+height: 34px;
+border: none;
+outline: none;
+background: url(img/login-input-bg.png);
+margin-bottom: 15px;
+}
+
+input[type="submit"]{
+	width:82px;
+	height: 30px;
+	border: none;
+	outline: none;
+	background: url(img/login-button-bg.png);
+	margin-left: 91px;
+}
+input[type="checkbox"]{
+	margin: 0px 3px 20px 74px;
+	position: relative;
+	top: 3px;
+}
+
+form{
+	position: absolute;
+	top: 230px;
+	left:  330px;
+	padding: 10px;
+}

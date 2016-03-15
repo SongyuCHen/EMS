@@ -14,14 +14,10 @@ import org.springframework.stereotype.Repository;
 @SuppressWarnings("all")
 public class BaseDaoImp<T> implements BaseDAO<T> {
 
-	
+	@Autowired
 	private SessionFactory sessionFactory;
 
-	public SessionFactory getSessionFactory() {
-		return sessionFactory;
-	}
-
-	@Autowired
+	
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}

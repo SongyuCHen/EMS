@@ -1,0 +1,415 @@
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+	{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}  /* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+	{
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+blockquote,q {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 1060px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+
+#header {
+	height: 142px;
+	background: url(img/header.png);
+	background-size: cover;
+}
+
+#nav {
+	height: 30px;
+	border: 1px solid #cfcfcf;
+	margin: 1px 0px;
+	background: url(img/nav-bg.png) repeat-x;
+}
+
+#main {
+	overflow: hidden;
+}
+
+#left {
+	float: left;
+	height: 600px;
+	width: 193px;
+	background: url(img/left.png);
+	background-size: cover;
+}
+
+#right {
+	margin-left: 199px;
+}
+
+#position {
+	width: 864px;
+	height: 41px;
+	background: url(img/position.png);
+	line-height: 46px;
+	padding-left: 30px;
+	font-size: 12px;
+	background-size: cover;
+	color: #666666;
+}
+
+#content {
+	width: 857px;
+	min-height: 300px;
+	background-color: #f0f0f0;
+	background-size: cover;
+	padding: 5px 10px;
+	margin-left: 3px;
+}
+
+#tjdykdd {
+	min-height: 300px;
+}
+
+#nav ul {
+	float: left;
+}
+
+#nav ul li {
+	display: inline-block;
+	line-height: 28px;
+	height: 28px;
+	padding-left: 40px;
+}
+
+#link {
+	float: right;
+	line-height: 28px;
+	height: 28px;
+	margin-right: 30px;
+}
+
+#link a {
+	text-decoration: none;
+	color: #0000ff;
+}
+
+span.yh,span.bm,span.time {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 2px;
+	margin-right: 4px;
+}
+
+span.yh {
+	background: url(img/icon-user.png);
+}
+
+span.bm {
+	background: url(img/icon-bm.png);
+}
+
+span.time {
+	background: url(img/icon-time.png);
+}
+
+#menu-title {
+	width: 185px;
+	height: 48px;
+	margin: 0 auto;
+	background: url(img/menu-bg.png);
+	text-align: center;
+	line-height: 48px;
+	margin-top: 5px;
+	color: white;
+}
+
+#menu-tree {
+	margin: 20px 15px;
+}
+
+#menu-tree li.one,#menu-tree li.two {
+	background: #e7f9fc;
+	width: 150px;
+	border: 1px solid #a6d0e7;
+	border-radius: 6px;
+}
+
+#menu-tree li.one {
+	height: 29px;
+	text-align: left;
+	line-height: 29px;
+	padding-left: 7px;
+	position: relative;
+	margin-bottom: 13px;
+}
+
+#menu-tree li.one.active {
+	margin-bottom: 4px;
+}
+
+#menu-tree li.two {
+	margin-bottom: 33px;
+	padding: 10px;
+	height: 130px;
+}
+
+#menu-tree li.one s {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	margin-right: 5px;
+	position: relative;
+	top: 4px;
+}
+
+li.emssqkdd s {
+	background: url(img/icon-pen.png);
+}
+
+li.emsxxcx s {
+	background: url(img/icon-search1.png);
+}
+
+li.cxgn s {
+	background: url(img/icon-search2.png);
+}
+
+#menu-tree li.one span {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	background: url(img/icon-close.png);
+	position: absolute;
+	top: 38%;
+	right: 10px;
+}
+
+#menu-tree li.one.active span {
+	background: url(img/icon-open.png);
+}
+
+#menu-tree li.one:hover {
+	cursor: pointer;
+}
+
+#menu-tree li.two {
+	display: none;
+}
+
+.sub-list {
+	padding-left: 20px;
+}
+
+.sub-list li {
+	list-style-type: disc;
+	height: 31px;
+	border-bottom: 1px dotted #cddee5;
+	line-height: 31px;
+}
+
+.sub-list li:hover {
+	cursor: pointer;
+}
+
+.sub-list li.active {
+	color: #1e88b8;
+}
+
+.c-title {
+	height: 42px;
+	width: 820px;
+	margin: 0 auto;
+	background: url(img/c-title-bg.png) no-repeat;
+	line-height: 42px;
+	padding-left: 42px;
+	margin-bottom: 5px;
+}
+
+.table-wrapper {
+	margin-left: 15px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	overflow: auto;
+}
+
+.T-table {
+	border: 1px solid #9EAEBC;
+	margin-top: 2px;
+}
+
+.T-table input {
+	width: 130px;
+	height: 20px;
+	border: 1px solid #89b9d0;
+}
+
+.T-table input[type="checkbox"] {
+	width: auto;
+	height: auto;
+	border: auto;
+}
+
+.T-table th {
+	padding: 5px 0px 5px 10px;
+}
+
+.T-table td {
+	padding: 5px 0px 5px 0px;
+}
+
+.T-table th {
+	text-align: right;
+}
+
+#main button,button.main {
+	height: 23px;
+	color: white;
+	background: url(img/button-bg.png);
+	border: 1px solid #0087ae;
+	border-radius: 4px;
+	padding-left: 18px;
+	padding-right: 18px;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.table-wrapper table {
+	width: 100%;
+}
+
+.R-table th,.R-table td {
+	border: 1px solid #9cc2e5;
+	text-align: center;
+}
+
+.R-table th {
+	height: 55px;
+	background: url(img/r-table-th-bg.png) repeat-x;
+	vertical-align: middle;
+}
+
+.R-table td {
+	height: 27px;
+	line-height: 27px;
+	background: #f1f7fa;
+}
+
+.R-table .R-td-ajmc span {
+	display: inline-block;
+	max-width: 300px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.btn-group {
+	padding: 10px 0px 10px 35px;
+}
+
+.needed {
+	color: #ff0000;
+}
+
+/*弹框样式*/
+.ui-dialog {
+	padding: 0px;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+	height: 35px;
+	line-height: 35px;
+	padding: 0px 10px;
+	background: #ade7f3;
+	border: none;
+	border-radius: 0px;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+	padding: 5px;
+	margin: 0px;
+	height: 40px;
+	text-align: center;
+	background: #ade7f3;
+	border: none;
+	border-radius: 0px;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+	float: inherit;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+	margin: 0px;
+	padding: 8px 20px;
+	height: 30px;
+	background: url(img/dlg-btn.png) repeat-x;
+	border: 1px solid #b3b3b3;
+	border-radius: 4px;
+	color: black;
+	font-weight: normal;
+}
+
+.ui-button-text-only .ui-button-text {
+	padding: 0px;
+	line-height: 1em;
+}
+
+.ui-dialog .ui-dialog-content {
+	clear: both;
+}
+
+.error {
+	color: #8a1f11;
+}
+
+.btn-group-float {
+	  text-align: right;
+  line-height: 3em;
+  /* margin: 500px 574px; */
+  position: fixed;
+  width: 834px;
+  height: 40px;
+  /* background-color: rgba(128, 128, 128, 0.25); */
+  bottom: 20px;
+  /* right: 62px; */
+}
+
+#wdykddcx {
+	padding-bottom: 60px;
+}
+
+.sub-list a{
+	text-decoration: none;
+	color: #1e88b8;
+}

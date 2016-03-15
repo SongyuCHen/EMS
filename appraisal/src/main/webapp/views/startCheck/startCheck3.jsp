@@ -36,8 +36,8 @@
                     </div>
                     <div class="sub_content">
                         <form class="checklist">
-                            <div class="check" ng-repeat = "x in df">
-                            	<input type="checkbox" ng-checked="selectAll"><span>{{x.name}}</span>
+                            <div class="check" ng-repeat = "x in lawcase">
+                            	<input type="checkbox" ng-model="x.done" ><span ng-bind="x.name"></span>
 	                        </div>                            
                         </form>
                     </div>
@@ -54,15 +54,15 @@
                         </form>
                         <form class="checklist">
                             <div class="check" ng-repeat = "x in staff">
-                                <input type="radio" name="people"><span>{{x.name}}</span>
+                                <input type="radio" ng-model="$parent.selectValue" value={{x.name}} name="staff" ><span>{{x.name}}</span>
                             </div>
                         </form>
 
                     </div>
                 </div>
                 <div class="forward">
-                	<img src="../../resources/image/startCheck/forward.png" ng-click="allot()" style="margin-top: 111px;">
-                	<span>{{}}</span>
+                	<span><img src="../../resources/image/startCheck/forward.png" ng-click="allot()" ></span>
+                	<span><img src="../../resources/image/startCheck/turnback.png" ng-click="turnback()" ></span>        
                 </div>
                 <div class="div_child">
                     <div class="sub_name">
@@ -70,10 +70,11 @@
                     </div>
                     <div class="sub_content">
                         <form class="checklist">
-                            <div class="check" ng-repeat = "x in result">
-                                <input type="checkbox"><span>{{x.name}}</span>
-                            </div>
-
+   							 <div class="check" ng-repeat = "x in result">
+                                <input type="checkbox" ng-model="x.done" name="result" value='{{x.lawcasename +"/"+x.staffname}}'><span>{{x.lawcasename +"/"+x.staffname}}</span>
+                           	</div>                     
+                       
+                          
                         </form>
                     </div>
                 </div>

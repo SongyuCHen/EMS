@@ -27,14 +27,14 @@
 		<property name="order" value="1"/>
 	</bean>  
       
-    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">  
+<!--     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">  
         <property name="definitions">  
             <list>  
                 <value>/layout/mainLayout.xml</value>
                 <value>/views/*/views.xml</value>   
             </list>  
         </property>  
-    </bean>  
+    </bean>   -->
 	<bean id="viewResolver2"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="order" value="2"/>
@@ -65,35 +65,6 @@
 	</bean>
 	
 	
-	<!-- 事务管理器 -->
-	<bean id="transactionManager"
-		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory"></property>
-	</bean>
-
-	<tx:advice id="txAdvice" transaction-manager="transactionManager">
-		<tx:attributes>
-			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
-			<tx:method name="query*" propagation="REQUIRED" read-only="true" />
-			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
-			<tx:method name="tr_*" propagation="REQUIRED" read-only="true" />
-			<tx:method name="tw_*" propagation="REQUIRED" />
-			<tx:method name="save*" propagation="REQUIRED" />
-			<tx:method name="delete*" propagation="REQUIRED" />
-			<tx:method name="add*" propagation="REQUIRED" />
-			<tx:method name="modify*" propagation="REQUIRED" />
-			<tx:method name="edit*" propagation="REQUIRED" />
-			<tx:method name="update*" propagation="REQUIRED" />
-			<tx:method name="*" propagation="REQUIRED" /> 
-		</tx:attributes>
-	</tx:advice>
-	<aop:config>
-		<!-- 配置一个切入点，匹配UserManager的所有方法的执行 -->
-		<aop:pointcut expression="execution(* nju.software.jxjs.service.*.*(..))"
-			id="userPointCut" />
-		<!-- 指定在userpointCut切入点应用txAdvice事务增强处理 -->
-		<aop:advisor advice-ref="txAdvice" pointcut-ref="userPointCut" />
-	</aop:config>
-	<tx:annotation-driven transaction-manager="transactionManager" />
+	
 	
 </beans>

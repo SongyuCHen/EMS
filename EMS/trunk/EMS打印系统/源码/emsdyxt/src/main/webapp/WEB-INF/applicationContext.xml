@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd   
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd   
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd   
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd     
+      http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring
+     http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd
+     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd"
+	default-lazy-init="true" default-autowire="byName"
+	xmlns:util="http://www.springframework.org/schema/util">
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>WEB-INF/jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+<!-- 	<bean id="dataSource" class="software.tjspxt.dynamicds.DynamicDataSource">
+		<property name="targetDataSources">
+			<map key-type="java.lang.String">
+				<entry key="Default" value-ref="currentDataSource" />
+				<entry key="Tjgyjzk" value-ref="jzkDataSource" />
+				<entry key="Tjyzy" value-ref="tjyzyDataSource" />
+				<entry key="Tjgy" value-ref="tjgyDataSource" />
+				<entry key="Tjezy" value-ref="tjezyDataSource" />
+				<entry key="Tjhpfy" value-ref="tjhpfyDataSource" />
+				<entry key="Tjnkfy" value-ref="tjnkfyDataSource" />
+				<entry key="Tjhbfy" value-ref="tjhbfyDataSource" />
+				<entry key="Tjhqfy" value-ref="tjhqfyDataSource" />
+				<entry key="Tjxqfy" value-ref="tjxqfyDataSource" />
+				<entry key="Tjbcfy" value-ref="tjbcfyDataSource" />
+				<entry key="Tjhdfy" value-ref="tjhdfyDataSource" />
+				<entry key="Tjhxfy" value-ref="tjhxfyDataSource" />
+				<entry key="Tjtgfy" value-ref="tjtgfyDataSource" />
+				<entry key="Tjhgfy" value-ref="tjhgfyDataSource" />
+				<entry key="Tjdgfy" value-ref="tjdgfyDataSource" />
+				<entry key="Tjdlfy" value-ref="tjdlfyDataSource" />
+				<entry key="Tjjnfy" value-ref="tjjnfyDataSource" />
+				<entry key="Tjnhfy" value-ref="tjnhfyDataSource" />
+				<entry key="Tjwqfy" value-ref="tjwqfyDataSource" />
+				<entry key="Tjjhfy" value-ref="tjjhfyDataSource" />
+				<entry key="Tjbdfy" value-ref="tjbdfyDataSource" />
+				<entry key="Tjjxfy" value-ref="tjjxfyDataSource" />
+				<entry key="Tjkfqfy" value-ref="tjkfqfyDataSource" />
+				<entry key="Tjhsfy" value-ref="tjhsfyDataSource" />
+				<entry key="Tjbhxqfy" value-ref="tjbhxqfyDataSource" />
+				<entry key="Tjtlfy" value-ref="tjtlfyDataSource" />
+			</map>
+		</property>
+		<property name="defaultTargetDataSource" ref="currentDataSource" />
+	</bean> -->
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="poolPreparedStatements" value="true" />
+		<property name="defaultAutoCommit" value="true" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<!--  <property name="dataSource" ref="dataSource" />-->
+		<property name="hibernateProperties">
+			<value> 
+				hibernate.dialect=${hibernate.dialect}
+				hibernate.query.substitutions=true
+				hibernate.show_sql=true
+				hibernate.hbm2ddl.auto=none
+			</value>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<!-- DO -->
+				<value>nju.software.ems.data.daoobject.KdtdDO</value>
+				<value>nju.software.ems.data.daoobject.DmbDO</value>
+				<value>nju.software.ems.data.daoobject.DmlbbDO</value>
+				<value>nju.software.ems.data.daoobject.AjJbDO</value>
+				<value>nju.software.ems.data.daoobject.DsrJbDO</value>
+				<value>nju.software.ems.data.daoobject.DsrGrDO</value>
+				<value>nju.software.ems.data.daoobject.DsrDwDO</value>
+				<value>nju.software.ems.data.daoobject.DsrXpJgDO</value>
+				<value>nju.software.ems.data.daoobject.SpryDO</value>
+				<value>nju.software.ems.data.daoobject.XtglYhbDO</value></list>
+		</property>
+	</bean>
+
+
+	<!-- 基础案件服务 -->
+
+	<!-- DAO -->
+	<bean id="kdtdDao"
+		class="nju.software.ems.data.dao.KdtdDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="dmbDao"
+		class="nju.software.ems.data.dao.DmbDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="dmlbbDao"
+		class="nju.software.ems.data.dao.DmlbbDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ajJbDao"
+		class="nju.software.ems.data.dao.AjJbDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="dsrJbDao"
+		class="nju.software.ems.data.dao.DsrJbDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="dsrGrDao"
+		class="nju.software.ems.data.dao.DsrGrDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="dsrDwDao"
+		class="nju.software.ems.data.dao.DsrDwDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="dsrXpJgDao"
+		class="nju.software.ems.data.dao.DsrXpJgDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="spryDao"
+		class="nju.software.ems.data.dao.SpryDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="xtglYhbDao"
+		class="nju.software.ems.data.dao.XtglYhbDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+		<bean id="sqlResultDao" class="nju.software.ems.data.dao.SqlResultDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- Repository -->
+
+	<!-- Service -->
+	<bean id="kdtdService" class="nju.software.ems.service.impl.KdtdServiceImpl"></bean>
+	<bean id="loginService" class="nju.software.ems.service.impl.LoginServiceImpl"></bean>
+	<bean id="ajcxService" class="nju.software.ems.service.impl.AjcxServiceImpl"></bean>
+	<bean id="dmService" class="nju.software.ems.service.impl.DmServiceImpl"></bean>
+	<bean id="dsrjbxxService" class="nju.software.ems.service.impl.DsrjbxxServiceImpl"></bean>
+	<bean id="ajjbService" class="nju.software.ems.service.impl.AjjbServiceImpl"></bean>
+	
+	<!-- Manager -->
+	<bean id="ajxxcxManager" class="nju.software.ems.biz.impl.AjxxcxManagerImpl"></bean>
+
+	<ehcache:annotation-driven cache-manager="ehCacheManager" />
+	<bean id="ehCacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" />
+
+	<!-- 定义本地化处理器 基于session -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
+
+
+	<!-- 事务处理 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设置文件长传最大为3MB -->
+		<property name="maxUploadSize">
+			<value>3145728</value>
+		</property>
+	</bean>
+</beans>

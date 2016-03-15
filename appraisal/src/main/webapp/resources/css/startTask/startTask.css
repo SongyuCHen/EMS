@@ -112,6 +112,13 @@
 .forward{
 	float: left;	
 	height:350px;
+	width:8%;
+	margin-top: 47px;
+}
+.forward span{
+	float:left;
+	width:100%;
+	text-align:center;
 }
 .sub_name{
     border-top-left-radius:10px;
